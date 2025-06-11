@@ -8,8 +8,21 @@ int maze(int sr,int sc,int er,int ec){
     int totalways=rightways + downways;
     return totalways;
 
+} 
+void printpath(int sr,int sc, int er, int ec, string s){
+    if(sr>er||sc>ec) return ;
+    if(sr==er && sc==ec){//destination reached
+        cout<<s<<endl;
+        return;
+    } 
+    printpath(sr,sc+1,er,ec,s+'R');//right
+    printpath(sr+1,sc,er,ec,s+'D');//down
+   
+    
+
 }
 int main(){
-    cout<<maze(1,1,2,3);
+   // cout<<maze(0,0,2,2);
+    printpath(1,1,3,3,"");
 
 }
