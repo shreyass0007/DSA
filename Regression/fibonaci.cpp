@@ -6,6 +6,6 @@ int fibo(int n){
    
 }
 int main(){
-    cout<<fibo(13);
+    cout<<fibo(2);
 
 }
