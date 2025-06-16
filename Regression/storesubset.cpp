@@ -10,14 +10,17 @@ void printsubset(string ans, string original, vector<string> &v) {
     }
     char ch = original[0];
     // Include the current character
-    printsubset(ans + ch, original.substr(1));
+    printsubset(ans + ch, original.substr(1),v);
     // Exclude the current character
-    printsubset(ans, original.substr(1));
+    printsubset(ans, original.substr(1),v);
 }
 
 int main() {
     string str = "abc";
     vector<string> v;
     printsubset("", str,v);  // Start with an empty answer string
-    return 0;
+    
+    for(string ele:v){
+        cout<<ele<<endl;
+    }
 }
