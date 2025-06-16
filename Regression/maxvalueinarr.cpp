@@ -16,4 +16,4 @@ int main() {
     int n = sizeof(arr) / sizeof(arr[0]);
     printMax(arr, n, 0, INT_MIN);
     return 0;
-}
+} 
